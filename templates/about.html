@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SecureLink</title>
+    <meta name="description" content="Learn about SecureLink's mission to protect users from phishing attacks using advanced machine learning technology.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">SecureLink</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav class="main-nav">
+          <ul>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <main class="home-page">
+        <!-- Hero Section -->
+        <section class="about-hero" aria-labelledby="about-title">
+            <div class="about-hero-content">
+                <h1 id="about-title">About SecureLink</h1>
+                <p class="hero-subtitle">Protecting the Digital World, One Click at a Time</p>
+                <p class="hero-description">
+                    SecureLink combines cutting-edge machine learning with cybersecurity expertise to detect and prevent phishing attacks in real-time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="mission-vision" aria-labelledby="mission-heading">
+            <div class="mission-vision-container">
+                <article class="mission-card">
+                    <div class="card-icon">🎯</div>
+                    <h2 id="mission-heading">Our Mission</h2>
+                    <p>
+                        To empower individuals and organizations with advanced tools to detect and prevent phishing attacks, 
+                        making the internet a safer place for everyone through innovative cybersecurity solutions.
+                    </p>
+                </article>
+
+                <article class="mission-card">
+                    <div class="card-icon">👁️</div>
+                    <h2>Our Vision</h2>
+                    <p>
+                        A world where phishing attacks are a thing of the past, where users can confidently navigate the internet 
+                        without fear of falling victim to malicious attacks.
+                    </p>
+                </article>
+
+                <article class="mission-card">
+                    <div class="card-icon">💡</div>
+                    <h2>Our Values</h2>
+                    <p>
+                        Security, Innovation, Integrity, and Customer-Centricity. We believe in transparent operations, 
+                        continuous improvement, and putting our users' security first.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="about-story" aria-labelledby="story-heading">
+            <div class="story-container">
+                <div class="story-content">
+                    <h2 id="story-heading">Our Story</h2>
+                    <p>
+                        SecureLink is a Phishing website detector in real time. It can counter or detect zero day attacks.
+                    </p>
+                    <p>
+                        Frustrated by the limitations of existing solutions, our founding team decided to create a better approach. 
+                        Spent months researching, developing, and training advanced ML models to identify phishing URLs with 
+                        unprecedented accuracy.
+                    </p>
+                    <p>
+                        Today, SecureLink has grown into a trusted platform used by thousands of users across the globe. 
+                        Our hybrid machine learning approach combines deep learning, signature-based detection, and heuristic analysis 
+                        to provide real-time protection against evolving phishing threats.
+                    </p>
+                    <p>
+                        We remain committed to our mission: making the internet safer, one scan at a time.
+                    </p>
+                </div>
+                <div class="story-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">2M+</div>
+                        <div class="stat-label">URLs Scanned</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">Detection Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Highlights Section -->
+        <section class="about-features" aria-labelledby="features-heading">
+            <div class="features-container">
+                <h2 id="features-heading">Why Choose SecureLink?</h2>
+                <div class="features-grid">
+                    <article class="feature-item" tabindex="0">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Get results in milliseconds with our optimized ML models and cloud infrastructure.</p>
+                    </article>
+
+                    <article class="feature-item" tabindex="0">
+                        <div class="feature-icon">🧠</div>
+                        <h3>AI-Powered</h3>
+                        <p>Advanced machine learning continuously learns from new threats to stay ahead of attackers.</p>
+                    </article>
+
+                    <article class="feature-item" tabindex="0">
+                        <div class="feature-icon">🔐</div>
+                        <h3>Highly Accurate</h3>
+                        <p>99.8% detection rate with minimal false positives ensures reliable protection.</p>
+                    </article>
+
+                    <article class="feature-item" tabindex="0">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Global Reach</h3>
+                        <p>Protect users across the globe with our distributed network and localized support.</p>
+                    </article>
+
+                    <article class="feature-item" tabindex="0">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Always Updated</h3>
+                        <p>Real-time threat intelligence feeds keep our detection models current.</p>
+                    </article>
+
+                    <article class="feature-item" tabindex="0">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Easy Integration</h3>
+                        <p>Simple API and browser extensions make integration seamless for any platform.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="about-team" aria-labelledby="team-heading">
+            <div class="team-container">
+                <h2 id="team-heading">Meet Our Leadership</h2>
+                <p class="team-intro">
+                    Our team brings together expertise in cybersecurity, machine learning, and business innovation.
+                </p>
+                <div class="team-grid">
+                    <article class="team-member">
+                        <div class="member-avatar">👩‍💻</div>
+                        <h3>Santosh</h3>
+                        <p class="member-role">Co-Founder</p>
+                        <p class="member-bio">
+                           Backend developer and implementor.
+                        </p>
+                    </article>
+
+                    <article class="team-member">
+                        <div class="member-avatar">👩‍💻</div>
+                        <h3>Siya</h3>
+                        <p class="member-role">Chief Technology Officer</p>
+                        <p class="member-bio">
+                            ML Engineer with expertise in deep learning and neural networks for pattern recognition.
+                        </p>
+                    </article>
+
+                    <article class="team-member">
+                        <div class="member-avatar">👨‍🔬</div>
+                        <h3>Kartik</h3>
+                        <p class="member-role">CEO</p>
+                        <p class="member-bio">
+                            Frontend Developer & Tester.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements" aria-labelledby="achievements-heading">
+            <div class="achievements-container">
+                <h2 id="achievements-heading">Our Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🏆</span>
+                        <h3>Best Cybersecurity Innovation 2025</h3>
+                        <p>Recognized by CyberSecurity Magazine</p>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">⭐</span>
+                        <h3>4.9/5 User Rating</h3>
+                        <p>Across all major app stores and platforms</p>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🔒</span>
+                        <h3>ISO 27001 Certified</h3>
+                        <p>Enterprise-grade security standards</p>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🌟</span>
+                        <h3>GDPR Compliant</h3>
+                        <p>Privacy-first data handling practices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <div class="testimonials-container">
+                <h2 id="testimonials-heading">What Our Users Say</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "SecureLink has become an essential part of my daily internet usage. The speed and accuracy are unmatched!"
+                        </p>
+                        <p class="testimonial-author">— Emma Thompson, Security Manager</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "We integrated SecureLink into our organization and saw immediate improvements in phishing incident reduction."
+                        </p>
+                        <p class="testimonial-author">— Michael Johnson, IT Director</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "The customer support team was incredibly helpful during our implementation. Highly recommended!"
+                        </p>
+                        <p class="testimonial-author">— Lisa Park, Operations Lead</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="technology-stack" aria-labelledby="tech-heading">
+            <div class="tech-container">
+                <h2 id="tech-heading">Our Technology Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h3>Machine Learning</h3>
+                        <ul>
+                            <li>XGBoost</li>
+                            <li>Random Forest Classifier</li>
+                            <li>Linear Regression</li>
+                            <li>SVM</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li> Node.js</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>Cloud Infrastructure</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML , CSS & JS</li>
+                            <li>WhoIs API</li>
+                            <li>Progressive Web Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Security</h3>
+                        <ul>
+                            <li>End-to-End Encryption</li>
+                            <li>Zero Trust Architecture</li>
+                            <li>Continuous Monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="about-cta" aria-labelledby="cta-heading">
+            <div class="cta-content">
+                <h2 id="cta-heading">Ready to Protect Yourself?</h2>
+                <p>Join thousands of users who trust SecureLink to keep them safe online.</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="cta-btn cta-btn-primary">Get Started Now</a>
+                    <a href="contact.html" class="cta-btn cta-btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SecureLink</h3>
+                <p>Real-time phishing website detection using advanced hybrid machine learning technology. Protecting every click.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+</ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@securelink.com">info@securelink.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Security Lane, Tech City, TC 12345</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SecureLink. All rights reserved. | Protecting your digital security</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='Script.js') }}"></script>
+</body>
+</html>

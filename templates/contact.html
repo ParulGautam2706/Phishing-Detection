@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SecureLink</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">SecureLink</div>
+        <!-- mobile menu toggle -->
+        <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav class="main-nav">
+           <ul>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main class="home-page">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Have questions? We're here to help. Reach out to the SecureLink team.</p>
+            </div>
+        </section>
+
+        <!-- Main Contact Section -->
+        <section class="contact-container">
+            <div class="contact-form-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    placeholder="John Doe" 
+                                    required
+                                    aria-label="Full Name"
+                                    aria-required="true">
+                                <span class="error-message" id="fullNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="john@example.com" 
+                                    required
+                                    aria-label="Email Address"
+                                    aria-required="true">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="+1 (555) 123-4567"
+                                aria-label="Phone Number">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="subject">Subject *</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                placeholder="How can we help?" 
+                                required
+                                aria-label="Subject"
+                                aria-required="true">
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" aria-label="Message Category">
+                                <option value="">-- Select a category --</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                placeholder="Please provide details about your inquiry..." 
+                                required
+                                aria-label="Message"
+                                aria-required="true"></textarea>
+                            <span class="error-message" id="messageError"></span>
+                            <span class="character-count"><span id="charCount">0</span>/500</span>
+                        </div>
+
+                        <div class="form-group full-width checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="subscribe" 
+                                name="subscribe"
+                                aria-label="Subscribe to newsletter">
+                            <label for="subscribe">I'd like to subscribe to SecureLink updates and news</label>
+                        </div>
+
+                        <div class="alert-message" id="successMessage"></div>
+                        <div class="alert-message alert-error" id="errorMessage"></div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-submit" aria-label="Send Message">
+                                <span>Send Message</span>
+                            </button>
+                            <button type="reset" class="btn-reset" aria-label="Reset Form">
+                                <span>Clear</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Office Address</h3>
+                        <p>123 Security Lane<br>Tech City, TC 12345<br>United States</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                        <p class="availability">Available: Mon-Fri, 9 AM - 6 PM EST</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:support@securelink.com">support@securelink.com</a></p>
+                        <p><a href="mailto:info@securelink.com">info@securelink.com</a></p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon">💬</div>
+                        <h3>Live Chat</h3>
+                        <p>Chat with our support team available during business hours</p>
+                        <button class="btn-chat" aria-label="Start Live Chat">Start Chat</button>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook" title="Facebook">f</a>
+                            <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
+                            <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+                            <a href="#" aria-label="GitHub" title="GitHub">⚙</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5316850599893!2d-74.00601!3d40.71278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27acde25e1%3A0x3e7e5e5e3e3e3e3e!2s123%20Security%20Lane%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="SecureLink Office Location Map"
+                    aria-label="Google Maps showing SecureLink office location">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is your average response time?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically respond to inquiries within 24 business hours. For urgent support, please call our hotline.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do you offer technical support?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our technical support team is available Monday through Friday, 9 AM to 6 PM EST. You can reach them via email, phone, or live chat.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I schedule a demo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Please contact us with your preferred date and time, and we'll schedule a personalized demo for your team.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What are your business hours?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our office is open Monday through Friday, 9 AM to 6 PM EST. We're closed on weekends and public holidays.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SecureLink</h3>
+                <p>Real-time phishing website detection using advanced hybrid machine learning technology. Protecting every click.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="{{ url_for('about') }}">About</a></li>
+                  <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                 </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@securelink.com">info@securelink.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Security Lane, Tech City, TC 12345</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SecureLink. All rights reserved. | Protecting your digital security</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='contact.js') }}"></script>
+</body>
+</html>
