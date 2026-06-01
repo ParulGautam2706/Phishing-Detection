@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 🎨 Color logic improved
             let color = "#2ecc71"; // green
-            if (risk > 50) color = "#ff4d4d"; // red
+            if (risk > 60) color = "#ff4d4d"; // red
             else if (risk > 20) color = "#f1c40f"; // yellow
 
             const date = new Date().toLocaleDateString();
